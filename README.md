@@ -1,2 +1,1 @@
-# .github
-Pinax Default Community Health Files
+# Pinax Default Community Health Files
