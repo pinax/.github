@@ -1,0 +1,11 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Pinax Documentation
+    url: https://pinaxproject.com/pinax/
+    # about: Placeholder
+  - name: Pinax Community Health Files
+    url: https://github.com/pinax/.github
+    # about: Placeholder
+  - name: Pinax Slack
+    url: http://slack.pinaxproject.com/
+    # about: Placeholder
