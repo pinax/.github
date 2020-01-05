@@ -6,6 +6,9 @@ contact_links:
   - name: Pinax Community Health File Repo
     url: https://github.com/pinax/.github
     about: Pinax default community health files
+  - name: Pinax Wiki
+    url: https://github.com/pinax/pinax/wiki
+    about: Current and historical release notes
   - name: Pinax Slack
     url: http://slack.pinaxproject.com/
     about: Pinax support channel
