@@ -2,13 +2,13 @@ blank_issues_enabled: true
 contact_links:
   - name: Pinax Documentation
     url: https://pinaxproject.com/pinax/
-    about: Comprehensive Pinax docs
+    about: Comprehensive documentation
   - name: Pinax Community Health File Repo
     url: https://github.com/pinax/.github
-    about: Pinax default community health files
+    about: Default community health files
   - name: Pinax Wiki
     url: https://github.com/pinax/pinax/wiki
     about: Current and historical release notes
   - name: Pinax Slack
     url: http://slack.pinaxproject.com/
-    about: Pinax support channel
+    about: Support channel
