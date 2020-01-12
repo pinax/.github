@@ -41,11 +41,7 @@ $ git checkout -b <new_branch>
 
 Keep in mind, that when you create a new branch, you might need to setup the branch like a new project, including installing packages, even if you have done so in the master branch.
 
-When ready, make your change, preferably including any new unit tests your change requires. Also, for apps included in the most recent release, run ```tox```, if needed. This can usually be done by running the Makefile.
-
-```bash
-$ Make
-```
+When ready, make your change, preferably including any new unit tests your change requires. If you are preparing an app for a new release, you might also need to test the supported versions matrix. See our [App Release Process](https://github.com/pinax/pinax/wiki/App-Release-Process) wiki page for more info.
 
 After any required tests pass and when you are ready, commit your changes. For example:
 
@@ -73,3 +69,10 @@ A box will be checked by default giving Pinax maintainers the ability to edit th
 Double check your changes
 
 Click "Create pull request"
+
+## Code Style
+
+When writing code for a Pinax project or app, keep in mind:
+
+* Although we do not always follow [PEP 8](http://www.python.org/dev/peps/pep-0008/), PEP 8 is an excellent starting point.
+* We do strictly follow the [Django coding style](http://docs.djangoproject.com/en/dev/internals/contributing/#coding-style) outlined in the official Django docs.
