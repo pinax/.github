@@ -4,20 +4,21 @@ Table of Contents
 
 * [Overview](#overview) 
 * [Community Plan](#community-plan) 
+* [Community Files](#community-files) 
+  * [Global Community Health File Repo](#global-community-health-file-repo) 
   * [Community Files in Repos](#community-files-in-repos) 
 * [Development Files](#development-files) 
   * [Pinax Starter Project Development Files](#pinax-starter-project-development-files) 
   * [Pinax App Development Files](#pinax-app-project-development-files) 
 * [Development Tools Overview](#development-tools-overview) 
-* [Commands](#commands)
-  * [Migrate](#migrate)
-  * [Run Unit Tests](#run-unit-tests)
-  * [Run Supported Versions Matrix](#run-supported-versions-matrix)
-* [Pinax Testing Tools Overview](#pinax-testing-tools-overview)
  * [Package Architecture](#package-architecture)
  * [Continuous Integration](#continuous-integration)
  * [Supported Versions Matrix Testing](#supported-versions-matrix)
  * [Code Coverage](#code-coverage)
+* [Commands](#commands)
+  * [Migrate](#migrate)
+  * [Run Unit Tests](#run-unit-tests)
+  * [Run Supported Versions Matrix](#run-supported-versions-matrix)
 * [Pinax Starter Project and App Release](#pinax-starter-project-and-app-release) 
   * [Pinax Starter Projects](#pinax-starter-projects) 
   * [Pinax Apps](#pinax-apps) 
@@ -48,18 +49,22 @@ Table of Contents
 
 ## Community Plan
 
+## Community Files
+
 ### Global Community Health File Repo
+
+| Folder/File         | Description                                                           |
+| ------------------- | --------------------------------------------------------------------- |
+| CONTRIBUTING.md     |                                                                       |
 
 ### Community Files in Repos
 
 Several of the files outside of the Pinax project and app folders are community files. 
 
-
 | Folder/File         | Description                                                           |
 | ------------------- | --------------------------------------------------------------------- |
 | README.md           | Project info and instructions                                         |
 | LICENSE             |                                                                       |
-| CONTRIBUTING.md     |                                                                       |
 | AUTHORS             |                                                                       |
 
 ## Development Files
