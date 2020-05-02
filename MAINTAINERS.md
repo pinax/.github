@@ -27,10 +27,11 @@ Table of Contents
   * [Things to Avoid](#things-to-avoid) 
 * [Communication Channels](#communication-channels)
   * [Default Community Health File Repo](#default-community-health-file-repo)
+  * [GitHub Popups](#github-popups) 
   * [Wiki](#wiki)
   * [README.md](#readmemd) 
+  * [Global Documentation Website](#global-documentation-website) 
   * [Blog Posts](#blog-posts) 
-  * [GitHub Popups](#github-popups) 
 * [Community Files](#community-files) 
   * [Community Files in Individual Repos](#community-files-in-individual-repos) 
   * [Global Community Health File Repo](#global-community-health-file-repo) 
@@ -46,7 +47,7 @@ Table of Contents
   * [ISSUE_TEMPLATE/question.md](#issue_templatequestionmd) 
   * [PULL_REQUEST_TEMPLATE.md](#pull_request_templatemd) 
 * [Glossary](#glossary)  
-  
+
 ## Pinax Overview
 
 Pinax code is open-source and can be found in the [Pinax GitHub organization](https://github.com/pinax) account, where Pinax development takes place. 
@@ -192,6 +193,8 @@ The existing `CODE_OF_CONDUCT.md` and revised `CONTRIBUTING.md` were moved to th
 
 The `CONTRIBUTING.md` files were deleted from individual repos.
 
+### GitHub Popups
+
 ### Wiki
 
 ### README.md
@@ -214,9 +217,9 @@ This `Important Links` Section will tell users and potential contributors where 
 
 The `README.md` `Contribute` and `Code of Conduct` section links point to the global community health file repo.
 
-### Blog Posts
+### Global Documentation Website
 
-### GitHub Popups
+### Blog Posts
 
 ## Community Files
 
