@@ -38,7 +38,7 @@ The contents of each individual starter project branch of the [Pinax starter pro
 
 The contents of each Pinax app repo becomes a tagged release available on the repo releases page and published to the [Python Package Index (PyPi)](https://pypi.org), where developers store packages for reuse by themselves and other developers.
 
-You can search PyPi for all of the [Pinax published packages](https://pypi.org/search/?q=pinax)!
+You can search PyPI for all of the [Pinax published packages](https://pypi.org/search/?q=pinax)!
 
 <!--
 https://github.com/pinax/pinax-cli/blob/master/pinaxcli/cli.py
