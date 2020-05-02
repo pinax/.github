@@ -2,6 +2,7 @@
 
 Table of Contents
 
+* [Pinax Overview](#pinax-overview) 
 * [Major Activities](#major-activities) 
   * [Development](#major-activities) 
   * [Release Management](#release-management) 
@@ -44,7 +45,12 @@ Table of Contents
   * [ISSUE_TEMPLATE/feature_request.md](#issue_templatefeature_requestmd) 
   * [ISSUE_TEMPLATE/question.md](#issue_templatequestionmd) 
   * [PULL_REQUEST_TEMPLATE.md](#pull_request_templatemd) 
+* [Glossary](#glossary)  
   
+## Pinax Overview
+
+Pinax code is open-source and can be found in the [Pinax GitHub organization](https://github.com/pinax) account, where Pinax development takes place. 
+
 ## Major Activities
 
 ### Development
@@ -102,7 +108,7 @@ Pinax uses a helper class called [django-appconf](https://django-appconf.readthe
 If you are preparing an app for a new release, you might also need to test the supported versions matrix. This can usually be done by running the Makefile.
 -->
 
-All apps should include `Makefile`. 
+All apps should include a `Makefile`. 
 
 Run the `Makefile`:
 
@@ -281,4 +287,11 @@ Several of the community files live within individual Pinax project and app repo
 ### PULL_REQUEST_TEMPLATE.md
 
 `PULL_REQUEST_TEMPLATE.md`: https://github.com/pinax/.github/blob/master/.github/PULL_REQUEST_TEMPLATE.md
+
+## Glossary
+
+### Tagged Release
+
+Both Pinax starter projects and apps are packaged as tagged releases on GitHub. Tagged releases enable a version of a codebase from a specific point in time to be used.
+
 
