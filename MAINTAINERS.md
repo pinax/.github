@@ -10,11 +10,12 @@ Table of Contents
  * [Package Architecture](#package-architecture)
  * [Continuous Integration](#continuous-integration)
  * [Supported Versions Matrix Testing](#supported-versions-matrix)
+ * [Run Supported Versions Matrix Tests](#run-supported-versions-matrix-tests)
  * [Code Coverage](#code-coverage)
-* [Commands](#commands)
-  * [Migrate](#migrate)
+* [Unit Tests](#unit-tests)
   * [Run Unit Tests](#run-unit-tests)
-  * [Run Supported Versions Matrix](#run-supported-versions-matrix)
+* [Migration](#migration)
+  * [Migrate Command](#migrate-command)
 * [High Level Community Plan](#high-level-community-plan)
   * [Inspiration](#inspiration) 
   * [Clarity, Standardization, and Discoverability](#clarity-standardization-and-discoverability) 
@@ -86,6 +87,20 @@ Pinax uses a helper class called [django-appconf](https://django-appconf.readthe
 
 [tox](https://tox.readthedocs.org) is used to test the supported versions matrix. [detox](https://github.com/tox-dev/detox), a [tox](https://tox.readthedocs.org) plugin used to run tox testenvs in parallel, has been used in Pinax extensively in the past, but will be replaced with [tox parallel mode](https://tox.readthedocs.io/en/latest/example/basic.html#parallel-mode). detox is now an archived project.
 
+### Run Supported Versions Matrix Tests
+
+<!--
+If you are preparing an app for a new release, you might also need to test the supported versions matrix. This can usually be done by running the Makefile.
+-->
+
+All apps should include `Makefile`. 
+
+Run the `Makefile`:
+
+```shell
+    $ Make
+```
+
 ### Code Coverage
 
 [Codecov](https://codecov.io) is used to provide coverage reports. [Coverage](http://coverage.readthedocs.org) is [required to collect coverage metrics](https://github.com/codecov/example-python#how-to-generate-coverage-reports).
@@ -98,9 +113,21 @@ Pinax uses a helper class called [django-appconf](https://django-appconf.readthe
 
 [isort](http://isort.readthedocs.io) is used to programmatically sort imports.
 
-## Commands
+## Unit Tests
 
-### Migrate
+### Run Unit Tests
+
+All apps should include `runtests.py`. 
+
+Run the app's tests:
+
+```shell
+    $ python manage.py runtests.py
+```
+
+## Migration
+
+### Migrate Command
 
 All apps that have models should include `makemigrations.py`. 
 
@@ -118,28 +145,6 @@ Run a project's migrations:
 
 ```shell
     $ python manage.py migrate
-```
-
-### Run Unit Tests
-
-All apps should include `runtests.py`. 
-
-Run the app's tests:
-
-```shell
-    $ python manage.py runtests.py
-```
-
-### Run Supported Versions Matrix 
-
-If you are preparing an app for a new release, you might also need to test the supported versions matrix. This can usually be done by running the Makefile.
-
-All apps should include `Makefile`. 
-
-Run the `Makefile`:
-
-```shell
-    $ Make
 ```
 
 ## High-Level Community Plan
@@ -166,23 +171,23 @@ We strive for clarity, standardization, and discoverability anytime possible. Th
 
 ### Default Community Health File Repo 
 
-During the 20.XX release, the `CONTRIBUTING.md` files were deleted from individual repos.
-
-A new [global community health file repo](https://github.com/pinax/.github) was created.
+During the 20.XX release, a new [global community health file repo](https://github.com/pinax/.github) was created.
 
 The existing `CODE_OF_CONDUCT.md` and revised `CONTRIBUTING.md` were moved to this repo. New `SUPPORT.md`, `ISSUE_TEMPLATE.md`, `PULL_REQUEST_TEMPLATE.md`, `MAINTAINERS.md`, and `RELEASE.md` were created.
+
+The `CONTRIBUTING.md` files were deleted from individual repos.
 
 ### Wiki
 
 ### README.md
 
-The most important Pinax links will be placed at the top of each Pinax `README.md` in an "Important Links" section, including links to new files in the community health file repo. 
+The most important Pinax links will be placed at the top of each Pinax `README.md` in an "Important Links" section, including links to files in the global community health file repo. 
 
-The new "Important Links" section was inspired by an [example](https://speakerdeck.com/hynek/maintaining-a-python-project-when-its-not-your-job?slide=9) from one of Hyenk's projects.
+The "Important Links" section was inspired by an [example](https://speakerdeck.com/hynek/maintaining-a-python-project-when-its-not-your-job?slide=9) from one of Hyenk's projects.
 
 There are two major benefits of doing this:
 1. To improve the discoverability of the most important Pinax links
-2. To direct contributors to the new, global `CONTRIBUTING.md` (the individual `CONTRIBUTING.md` files in each repo will have been removed)
+2. To direct contributors to the new, global `CONTRIBUTING.md`
 
 This `Important Links` Section will tell users and potential contributors where to find:
 * Releases
@@ -230,7 +235,7 @@ Several of the community files live within individual Pinax project and app repo
  
 ### CODE_OF_CONDUCT.md
 
-`SUPPORT.md`: https://github.com/pinax/.github/blob/master/.github/CODE_OF_CONDUCT.md
+`CODE_OF_CONDUCT.md`: https://github.com/pinax/.github/blob/master/.github/CODE_OF_CONDUCT.md
 
 ### SUPPORT.md
 
@@ -242,11 +247,11 @@ Several of the community files live within individual Pinax project and app repo
 
 ### MAINTAINERS.md
 
-`CONTRIBUTING.md`: https://github.com/pinax/.github/blob/master/MAINTAINERS.md
+`MAINTAINERS.md`: https://github.com/pinax/.github/blob/master/MAINTAINERS.md
 
 ### RELEASE.md
 
-`CONTRIBUTING.md`: https://github.com/pinax/.github/blob/master/RELEASE.md
+`RELEASE.md`: https://github.com/pinax/.github/blob/master/RELEASE.md
 
 ### ISSUE_TEMPLATE/config.yml
 
