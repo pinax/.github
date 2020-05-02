@@ -3,15 +3,18 @@
 Table of Contents
 
 * [Major Activities](#major-activities) 
+  * [Development](#major-activities) 
+  * [Release Management](#release-management) 
+  * [Technical Community Management](#technical-community-management) 
 * [Development Files](#development-files) 
   * [Pinax Starter Project Development Files](#pinax-starter-project-development-files) 
   * [Pinax App Development Files](#pinax-app-project-development-files) 
 * [Development Tools Overview](#development-tools-overview) 
- * [Package Architecture](#package-architecture)
- * [Continuous Integration](#continuous-integration)
- * [Supported Versions Matrix Testing](#supported-versions-matrix)
- * [Run Supported Versions Matrix Tests](#run-supported-versions-matrix-tests)
- * [Code Coverage](#code-coverage)
+  * [Package Architecture](#package-architecture)
+  * [Continuous Integration](#continuous-integration)
+  * [Supported Versions Matrix Testing](#supported-versions-matrix)
+  * [Run Supported Versions Matrix Tests](#run-supported-versions-matrix-tests)
+  * [Code Coverage](#code-coverage)
 * [Unit Tests](#unit-tests)
   * [Run Unit Tests](#run-unit-tests)
 * [Migration](#migration)
@@ -44,6 +47,12 @@ Table of Contents
   
 ## Major Activities
 
+### Development
+
+### Release Management
+
+### Technical Community Management
+  
 ## Development Files
 
 Several of the files outside of the Pinax project and app folders are configuration files used in the development process. 
