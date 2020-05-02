@@ -30,10 +30,6 @@ Table of Contents
   
 ## Pinax Starter Project and App Release
 
-Pinax code is open-source and can be found in the [Pinax GitHub organization](https://github.com/pinax) account, where Pinax Development takes place. 
-
-Both Pinax starter projects and apps are packaged as tagged releases via GitHub. Tagged releases enable a version of a codebase from a specific point in time to be used.
-
 ### Pinax Starter Projects
 
 The contents of each individual starter project branch of the [Pinax starter projects repo](https://github.com/pinax/pinax-starter-projects) becomes a tagged release available on the [Pinax starter projects repo releases page](https://github.com/pinax/pinax-starter-projects/releases).
@@ -58,6 +54,7 @@ https://github.com/pinax/pinax/blob/master/projects.json
 * pinax-starter-app
 * pinax-cli
 * pinax-templates
+* Any apps that can be brought up to date
 
 ### Must Have Improvements
 
@@ -109,19 +106,31 @@ The Latest GitHub Features
 
 * Pinax individual app releases follow the [SemVer (Semantic Versioning)](https://semver.org/) specification.
 
-## Release Process
+## Essential Process to Tag and Publish to PyPI
 
 <!--
-### Possibly Deprecated Checklist
+Possibly Deprecated
 
 Script https://github.com/pinax/pinax/blob/master/check.py can help identify which apps need releases. Be sure to install requirements as specified.
 
 * do a release on GitHub with tag of form `v1.2.3` and release name of `1.2.3`, using the changelog entry for the release notes
-* do `git clean -fdx`
-* publish to pypi with `python setup.py sdist bdist_wheel upload`
 
 see also https://github.com/pinax/pinax/issues/113
+
+https://git-scm.com/docs/git-clean
 -->
+
+Force removal of untracked files and directories
+
+```bash
+$ git clean -fdx
+```
+
+Publish to PyPI
+
+```python
+$ python setup.py sdist bdist_wheel upload
+```
 
 ### Existing Pull Requests and Issues
 
