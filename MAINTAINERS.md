@@ -7,35 +7,21 @@ Table of Contents
   * [Development](#major-activities) 
   * [Release Management](#release-management) 
   * [Technical Community Management](#technical-community-management) 
-* [Development Files](#development-files) 
-  * [Pinax Starter Project Development Files](#pinax-starter-project-development-files) 
-  * [Pinax App Development Files](#pinax-app-project-development-files) 
-* [Development Tools Overview](#development-tools-overview) 
-  * [Package Architecture](#package-architecture)
-  * [Continuous Integration](#continuous-integration)
-  * [Supported Versions Matrix Testing](#supported-versions-matrix)
-  * [Run Supported Versions Matrix Tests](#run-supported-versions-matrix-tests)
-  * [Code Coverage](#code-coverage)
-* [Unit Tests](#unit-tests)
-  * [Run Unit Tests](#run-unit-tests)
-* [Migration](#migration)
-  * [Migrate Command](#migrate-command)
-* [High Level Community Plan](#high-level-community-plan)
+* [Keeping Track](#keeping-track) 
+* [Pinax Community Plan](#pinax-community-plan)
   * [Inspiration](#inspiration) 
-  * [Clarity, Standardization, and Discoverability](#clarity-standardization-and-discoverability) 
   * [Goals of the Pinax Community Plan](#goals-of-the-pinax-community-plan) 
   * [Things to Avoid](#things-to-avoid) 
 * [Communication Channels](#communication-channels)
-  * [Default Community Health File Repo](#default-community-health-file-repo)
-  * [GitHub Popups](#github-popups) 
-  * [Wiki](#wiki)
+  * [Global Community Health File Repo](#global-community-health-file-repo)
   * [README.md](#readmemd) 
   * [Global Documentation Website](#global-documentation-website) 
+  * [Wiki](#wiki)
   * [Blog Posts](#blog-posts) 
 * [Community Files](#community-files) 
   * [Community Files in Individual Repos](#community-files-in-individual-repos) 
   * [Global Community Health File Repo](#global-community-health-file-repo) 
-* [Global Community Health File Repo Files](#default-community-health-file-repo-files)
+* [Global Community Health File Repo Files](#global-community-health-file-repo-files)
   * [CODE_OF_CONDUCT.md](#code_of_conductmd) 
   * [SUPPORT.md](#supportmd) 
   * [CONTRIBUTING.md](#contributingmd) 
@@ -50,142 +36,77 @@ Table of Contents
 
 ## Pinax Overview
 
-Pinax code is open-source and can be found in the [Pinax GitHub organization](https://github.com/pinax) account, where Pinax development takes place. 
+Pinax is an open-source ecosystem of reusable Django starter projects, apps, and themes for building websites.
+
+Pinax code can be found in the [Pinax GitHub organization](https://github.com/pinax) account, where Pinax development takes place. 
+
+Pinax primarily consists
+* Django starter projects contained in the branches of the [Pinax Starter Projects](https://github.com/pinax/pinax-starter-projects) repo
+* [pinax-cli](https://github.com/pinax/pinax-cli), a command line interface that can be used to install these starter projects
+* Django apps that provide a variety of functionality
+* [pinax-templates](https://github.com/pinax/pinax-templates), a group of semantic templates made for use with Pinax
 
 ## Major Activities
 
-### Development
+Pinax maintainers do several different things:
+* Code review and development
+* Release management
+* Technical community management
+
+Here is a bit more information about each activity:
+
+### Code Review and Development
+
+Pinax repos contain issues with feature requests open for debate. From time-to-time, an open-source contributor will open a new issue to suggest a feature or a pull request to add a feature. Pinax maintainers review these PRs and provide feedback, if needed. If the PR is accurate and a good fit for the codebase, the PR will be merged. Pinax maintainers, including several of the original authors, also contribute code to Pinax at times.
+
+Anytime possible:
+* Triage, merge, and close PRs
+* Triage and close issues
 
 ### Release Management
 
+Pinax is made with Python and Django. The Python and Django codebases are improved over time and new releases are published. These new releases often include new features and security measures.
+
+When a new Pinax release happens, the Pinax supported versions matrix is updated to add support for the new versions of Python and Django that are officially supported and drop support for the old versions that are no longer officially supported. The apps included in the Pinax release are then tested against this matrix. Based on the feedback from the tests, changes are made to make the Pinax code compliant with the officially supported versions of Python and Django. 
+
+The apps are then published as tagged releases on GitHub and PyPI.
+
+See the [RELEASES.md](https://github.com/pinax/.github/blob/master/RELEASE.md) for instructions and the [Pinax Wiki](https://github.com/pinax/pinax/wiki) for historical release plans. 
+
 ### Technical Community Management
-  
-## Development Files
 
-Several of the files outside of the Pinax project and app folders are configuration files used in the development process. 
+Pinax users and contributors often have questions. They sometimes ask through a GitHub issue in a repo. Pinax issues are configured to give the option of creating a "Question" issue. They might also join the Pinax Slack channel for help. Questions are asked particularly often in the #general, #help, and #community channels. Answer questions, as needed. Other community members will sometimes offer their own insights too.
 
-<!--
-For information about JavaScript files, see the JavaScript section.
--->
+## Keeping Track
 
-### Pinax Starter Project Development Files
+Because the Pinax organization contains around 80 repos, it can be difficult to keep up with the work. Here are a few tips for staying up-to-date:
+* If you have access, check the [Pinax GitHub dashboard](https://github.com/orgs/pinax/dashboard) often; this dashboard will show recent activity such as new PRs, issues, comments, and forks
+* If you have access, set reminders to review PRs
 
-| Folder/File                | Description                                                           |
-| -------------------------- | --------------------------------------------------------------------- |
-| .gitignore                 | Instructs git of files to exclude when pushing files to git repo      |
-| Pipfile                    |                                                                       |
-| setup.cfg                  |                                                                       |
-| update.sh                  | Shell script used to automate commands                                |
-
-### Pinax App Development Files
-
-| Folder/File                | Description                                                           |
-| -------------------------- | --------------------------------------------------------------------- |
-| .circleci/config.yml       |                                                                       |
-| .coveragerc                |                                                                       |
-| .gitignore                 | Instructs git of files to exclude when pushing files to git repo      |
-| MANIFEST.in                |                                                                       |
-| Makefile                   |                                                                       |
-| makemigrations.py          |                                                                       |
-| runtests.py                |                                                                       |
-| setup.py                   |                                                                       |
-| tox.ini                    | A Tox config file                                                     |
-
-## Development Tools Overview
-
-### Package Architecture
-
-Pinax uses a helper class called [django-appconf](https://django-appconf.readthedocs.io) to handle Django app packaging defaults "gracefully."
-
-### Continuous Integration
-
-### Supported Versions Matrix Testing
-
-[tox](https://tox.readthedocs.org) is used to test the supported versions matrix. [detox](https://github.com/tox-dev/detox), a [tox](https://tox.readthedocs.org) plugin used to run tox testenvs in parallel, has been used in Pinax extensively in the past, but will be replaced with [tox parallel mode](https://tox.readthedocs.io/en/latest/example/basic.html#parallel-mode). detox is now an archived project.
-
-### Run Supported Versions Matrix Tests
-
-<!--
-If you are preparing an app for a new release, you might also need to test the supported versions matrix. This can usually be done by running the Makefile.
--->
-
-All apps should include a `Makefile`. 
-
-Run the `Makefile`:
-
-```shell
-    $ Make
-```
-
-### Code Coverage
-
-[Codecov](https://codecov.io) is used to provide coverage reports. [Coverage](http://coverage.readthedocs.org) is [required to collect coverage metrics](https://github.com/codecov/example-python#how-to-generate-coverage-reports).
-
-### Style, Linting, and Import Sorting
-
-[Flake8](http://flake8.pycqa.org) is used to check style and complexity. Flake8 includes [Doc8](https://github.com/PyCQA/doc8) style checker, [pydocstyle](http://www.pydocstyle.org/) docstring style checker, and [McCabe](http://pypi.python.org/pypi/mccabe) complexity checker.
-
-[Flake8 Quotes](https://github.com/zheller/flake8-quotes), a Flake8 extension for quote linting, is used to enforce double quotes. This is a Pinax design choice.
-
-[isort](http://isort.readthedocs.io) is used to programmatically sort imports.
-
-## Unit Tests
-
-### Run Unit Tests
-
-All apps should include `runtests.py`. 
-
-Run the app's tests:
-
-```shell
-    $ python manage.py runtests.py
-```
-
-## Migration
-
-### Migrate Command
-
-All apps that have models should include `makemigrations.py`. 
-
-<!--
-Instructions are needed for how to use `makemigrations.py`
--->
-
-Run an app's migrations to create database tables:
-
-```shell
-    $ python manage.py migrate <app>
-```
-
-Run a project's migrations:
-
-```shell
-    $ python manage.py migrate
-```
-
-## High-Level Community Plan
+## Pinax Community Plan
 
 ### Inspiration
 
 The Pinax Community Plan was inspired by a talk by Hynek Schlawak entitled [Maintaining a Project When It's Not Your Job](https://speakerdeck.com/hynek/maintaining-a-python-project-when-its-not-your-job). According to Hynek, ideally, using and contributing to a project should be as straightforward as  possible, so that the maintainer becomes involved as late in the process as possible. Otherwise, a failure has happened in the process.
 
-### Clarity, Standardization, and Discoverability
-
-We strive for clarity, standardization, and discoverability anytime possible. This makes it easier to maintain Pinax, and easier to onboard newcomers.
-
 ### Goals of the Pinax Community Plan
 
-1. Help users find what they need
-2. Make contributing as easy as possible
+We strive for clarity, standardization, and discoverability anytime possible. This makes it easier to maintain Pinax and easier to onboard newcomers.
+
+In a nutshell, the Pinax Community Plan should:
+1. Help community members find what they need
+2. Make it as easy as possible to get started using and contributing to Pinax
 3. Increase engagement
 
 ### Things to Avoid
 
-* [Tribal knowledge](https://en.wikipedia.org/wiki/Tribal_knowledge): unwritten knowledge that may be known among members of the "tribe", but unknown to outsiders
+* [Tribal knowledge](https://en.wikipedia.org/wiki/Tribal_knowledge) (unwritten knowledge that may be known among members of the "tribe", but unknown to outsiders): knowledge should be documented
+* Duplication: there should be one source of truth
+* Random location: information should be strategically located
 
 ## Communication Channels
 
-### Default Community Health File Repo 
+### Global Community Health File Repo 
 
 During the 20.XX release, a new [global community health file repo](https://github.com/pinax/.github) was created.
 
@@ -193,9 +114,8 @@ The existing `CODE_OF_CONDUCT.md` and revised `CONTRIBUTING.md` were moved to th
 
 The `CONTRIBUTING.md` files were deleted from individual repos.
 
-### GitHub Popups
-
-### Wiki
+The global community health file repo provides some beneficial, built-in functionality
+* GitHub will automatically show users popup messages featuring links to some of these files; for example, links to the `CODE_OF_CONDUCT.md` and `CONTRIBUTING.md` files may be shown to first-time contributors
 
 ### README.md
 
@@ -218,6 +138,10 @@ This `Important Links` Section will tell users and potential contributors where 
 The `README.md` `Contribute` and `Code of Conduct` section links point to the global community health file repo.
 
 ### Global Documentation Website
+
+### Wiki
+
+The [Pinax Wiki](https://github.com/pinax/pinax/wiki) contains historical release plans. 
 
 ### Blog Posts
 
