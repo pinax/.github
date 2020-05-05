@@ -2,7 +2,6 @@
 
 Table of Contents
 
-* [Pinax Overview](#pinax-overview) 
 * [Major Activities](#major-activities) 
   * [Development](#major-activities) 
   * [Release Management](#release-management) 
@@ -33,18 +32,6 @@ Table of Contents
   * [ISSUE_TEMPLATE/question.md](#issue_templatequestionmd) 
   * [PULL_REQUEST_TEMPLATE.md](#pull_request_templatemd) 
 * [Glossary](#glossary)  
-
-## Pinax Overview
-
-Pinax is an open-source ecosystem of reusable Django starter projects, apps, and themes for building websites.
-
-Pinax code can be found in the [Pinax GitHub organization](https://github.com/pinax) account, where Pinax development takes place. 
-
-Pinax primarily consists
-* Django starter projects contained in the branches of the [Pinax Starter Projects](https://github.com/pinax/pinax-starter-projects) repo
-* [pinax-cli](https://github.com/pinax/pinax-cli), a command line interface that can be used to install these starter projects
-* Django apps that provide a variety of functionality
-* [pinax-templates](https://github.com/pinax/pinax-templates), a group of semantic templates made for use with Pinax
 
 ## Major Activities
 
