@@ -23,23 +23,19 @@ Table of Contents
   * [Release Pull Request Checklist](#release-pull-request-checklist)  
   * [Documentation, Tutorials, Demos](#documentation-tutorials-demos) 
   * [Community](#community) 
-* [Spread the Word](#spread-the-word) 
-  * [Stats](#stats) 
-  * [Credit](#credit) 
-  * [Blog Posts](#blog-posts) 
 * [Development Files](#development-files) 
   * [Pinax Starter Project Development Files](#pinax-starter-project-development-files) 
   * [Pinax App Development Files](#pinax-app-project-development-files) 
 * [Development Tools Overview](#development-tools-overview) 
-  * [Package Architecture](#package-architecture)
-  * [Continuous Integration](#continuous-integration)
   * [Supported Versions Matrix Testing](#supported-versions-matrix)
   * [Run Supported Versions Matrix Tests](#run-supported-versions-matrix-tests)
+  * [Continuous Integration](#continuous-integration)
   * [Code Coverage](#code-coverage)
-* [Unit Tests](#unit-tests)
-  * [Run Unit Tests](#run-unit-tests)
-* [Migration](#migration)
-  * [Migrate Command](#migrate-command)
+  * [Style, Linting, and Import Sorting](#style-linting-and-import-sorting)
+* [Spread the Word](#spread-the-word) 
+  * [Stats](#stats) 
+  * [Credit](#credit) 
+  * [Blog Posts](#blog-posts) 
   
 ## Pinax Starter Project and App Release
 
@@ -195,12 +191,6 @@ Nice to Have
 - [ ] Mark deprecated repos as deprecated, especially in the repo description line
 - [ ] Add repo tags (Possible tags: django-project-template, python, django, pinax)
 
-## Spread the Word
-
-Release blog post
-* Release stats
-* Credit to contributors, including new features
-
 ## Development Files
 
 Several of the files outside of the Pinax project and app folders are configuration files used in the development process. 
@@ -232,13 +222,12 @@ For information about JavaScript files, see the JavaScript section.
 | setup.py                   |                                                                       |
 | tox.ini                    | A tox config file                                                     |
 
+<!--
+All apps that have models should include `makemigrations.py`. 
+All apps should include `runtests.py`. 
+-->
+
 ## Development Tools Overview
-
-### Package Architecture
-
-Pinax uses a helper class called [django-appconf](https://django-appconf.readthedocs.io) to handle Django app packaging defaults "gracefully."
-
-### Continuous Integration
 
 ### Supported Versions Matrix Testing
 
@@ -258,6 +247,8 @@ Run the `Makefile`:
     $ Make
 ```
 
+### Continuous Integration
+
 ### Code Coverage
 
 [Codecov](https://codecov.io) is used to provide coverage reports. [Coverage](http://coverage.readthedocs.org) is [required to collect coverage metrics](https://github.com/codecov/example-python#how-to-generate-coverage-reports).
@@ -270,38 +261,8 @@ Run the `Makefile`:
 
 [isort](http://isort.readthedocs.io) is used to programmatically sort imports.
 
-## Unit Tests
+## Spread the Word
 
-### Run Unit Tests
-
-All apps should include `runtests.py`. 
-
-Run the app's tests:
-
-```shell
-    $ python manage.py runtests.py
-```
-
-## Migration
-
-### Migrate Command
-
-All apps that have models should include `makemigrations.py`. 
-
-<!--
-Instructions are needed for how to use `makemigrations.py`
--->
-
-Run an app's migrations to create database tables:
-
-```shell
-    $ python manage.py migrate <app>
-```
-
-Run a project's migrations:
-
-```shell
-    $ python manage.py migrate
-```
-
-
+Release blog post
+* Release stats
+* Credit to contributors, including new features
