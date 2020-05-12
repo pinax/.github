@@ -26,7 +26,6 @@ Table of Contents
   * [ISSUE_TEMPLATE/feature_request.md](#issue_templatefeature_requestmd) 
   * [ISSUE_TEMPLATE/question.md](#issue_templatequestionmd) 
   * [PULL_REQUEST_TEMPLATE.md](#pull_request_templatemd) 
-* [Glossary](#glossary)  
 
 ## Pinax Community Plan
 
@@ -159,11 +158,3 @@ Several of the community files live within individual Pinax project and app repo
 ### PULL_REQUEST_TEMPLATE.md
 
 `PULL_REQUEST_TEMPLATE.md`: https://github.com/pinax/.github/blob/master/.github/PULL_REQUEST_TEMPLATE.md
-
-## Glossary
-
-### Tagged Release
-
-Both Pinax starter projects and apps are packaged as tagged releases on GitHub. Tagged releases enable a version of a codebase from a specific point in time to be used.
-
-
