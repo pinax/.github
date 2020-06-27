@@ -4,7 +4,17 @@ Thank you for contributing to Pinax!
 
 There are many ways to contribute: reporting bugs, requesting features, providing input on issues and pull requests, writing documentation, and submitting code, just to name a few.
 
-## Non-Pull Request (PR) Contributions
+## Things We Need Help With
+
+### Beginner
+
+### Intermediate
+
+### Advanced
+
+## Contributing Guidance
+
+### Non-Pull Request (PR) Contributions
 
 Some contributions require a pull request, and others do not.
 
@@ -12,7 +22,7 @@ If you find a bug in a Pinax code base or have a feature request, please open an
 
 We also welcome input and discussion in issues and pull requests.
 
-## Pull Request (PR) Contributions
+### Pull Request (PR) Contributions
 
 Contributions that will be merged into a code base require a pull request so that a maintainer can review the contribution before merging.
 
@@ -70,7 +80,7 @@ Double check your changes
 
 Click "Create pull request"
 
-## Code Style
+### Code Style
 
 When writing code for a Pinax project or app, keep in mind:
 
