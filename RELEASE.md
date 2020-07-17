@@ -16,7 +16,8 @@ Table of Contents
   * [Oversight](#oversight)  
   * [Release Versioning](#release-versioning)
   * [App Versioning](#app-versioning)
-  * [Essential Process to Tag and Publish to PyPI](#essential-process-to-tag-and-publish-to-pypi)  
+  * [Tagging](#tagging)  
+  * [Publishing to PyPI](#publishing-to-pypi)  
 * [Release Process](#process)  
   * [Release Planning Checklist](#release-planning-checklist)  
   * [Testing and Release Checklist](#testing-and-release-checklist)  
@@ -108,26 +109,83 @@ The Latest GitHub Features
 ### Release Versioning
 
 * Pinax releases follow the [CalVer (Calendar Versioning)](https://calver.org/) specification.
-* Use `yy.mm` for a limited timeframe
-* Otherwise, use `yy.xx`
+* Use `yy.mm` for a limited timeframe, where ``yy`` is the year and ``mm`` is the month.
+* Use `yy.xx` for an unlimited timeframe, where ``yy`` is the year
 
 ### App Versioning
 
 * Pinax individual app releases follow the [SemVer (Semantic Versioning)](https://semver.org/) specification.
 
-### Essential Process to Tag and Publish to PyPI
+### Tagging
 
+In each repo "tags" section click on "Releases" and "Draft a new release"
+
+* Target branch should be set to master
+* For "Tag version" use `v1.2.3` format
+* For "Release title" use `1.2.3` format
+* Use the README.md Change Log entry for release notes, either by copy and paste or markdown hyperlink
+
+### Publishing to PyPI
+  
 <!--
 Possibly Deprecated
 
 Script https://github.com/pinax/pinax/blob/master/check.py can help identify which apps need releases. Be sure to install requirements as specified.
 
-* do a release on GitHub with tag of form `v1.2.3` and release name of `1.2.3`, using the changelog entry for the release notes
-
 see also https://github.com/pinax/pinax/issues/113
 
 https://git-scm.com/docs/git-clean
 -->
+
+Some of this guidance was taken from the PyPI [packaging tutorial](https://packaging.python.org/tutorials/packaging-projects/).
+
+```setuptools```, ```wheel```, and ```twine``` should be installed  
+  
+#### Updated Method
+
+Force removal of untracked files and directories
+
+```bash
+$ git clean -fdx
+```
+
+Generate distribution packages for the package
+
+```bash
+$ python3 setup.py sdist bdist_wheel
+```
+
+##### Upload to PyPI Test Instance
+
+Upload to PyPI test instance... go to the test instance page to double check that everything looks right
+
+```bash
+$ python3 -m twine upload --repository testpypi dist/*
+```
+
+Install new package from test instance
+
+```bash
+$ python3 -m pip install --index-url https://test.pypi.org/simple/ --no-deps 
+```
+
+##### Upload to PyPI
+
+Upload to PyPI
+
+```bash
+$ python3 -m twine upload dist/*
+```
+
+Install new package from PyPI
+
+```bash
+$ pip install <package>
+```
+
+#### Previous Method
+
+This method (pre-Python 3) did not use ```twine```, which is now considered a best practice.
 
 Force removal of untracked files and directories
 
