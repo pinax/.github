@@ -6,11 +6,23 @@ There are many ways to contribute: reporting bugs, requesting features, providin
 
 ## Things We Need Help With
 
-### Beginner
+### High Priority Issues
 
-### Intermediate
+* Make it as easy as possible for new users to get started on any OS (easy install and straightforward docs/tutorial)
+* Improve our global docs
+* Check docs in README.mds to verify accuracy
 
-### Advanced
+### Common Issues
+
+* Find typos
+* Find bugs
+* Identify and discussing possible new features
+* Resolve issues and PRs
+
+### Longterm Issues
+
+* Create tutorials
+* Create demos
 
 ## Contributing Guidance
 
