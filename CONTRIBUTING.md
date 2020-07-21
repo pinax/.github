@@ -11,6 +11,8 @@ There are many ways to contribute: reporting bugs, requesting features, providin
 * Make it as easy as possible for new users to get started on any OS (easy install and straightforward docs/tutorial; for Windows, see: https://github.com/pinax/pinax/issues/152)
 * Improve our global docs
 * Check docs in README.mds to verify accuracy
+* Find new ways to automate tasks
+* Improve our global community health files (See: https://github.com/pinax/.github/)
 
 ### Common Issues
 
