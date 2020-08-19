@@ -12,4 +12,5 @@ Changes proposed in this PR:
 * Unit tests have been updated/added, if needed
 * App version number has been updated in `setup.py` (Pinax uses [SemVer](https://semver.org/))
 * `Change Log` has been updated
+* You have added your name to the `AUTHORS` file
 
